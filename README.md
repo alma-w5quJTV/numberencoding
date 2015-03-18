@@ -6,9 +6,9 @@ About
 
 The following mapping from letters to digits is given:
 
-E | J N Q | R W X | D S Y | F T | A M | C I V | B K U | L O P | G H Z
-e | j n q | r w x | d s y | f t | a m | c i v | b k u | l o p | g h z
-0 |   1   |   2   |   3   |  4  |  5  |   6   |   7   |   8   |   9
+    E | J N Q | R W X | D S Y | F T | A M | C I V | B K U | L O P | G H Z
+    e | j n q | r w x | d s y | f t | a m | c i v | b k u | l o p | g h z
+    0 |   1   |   2   |   3   |  4  |  5  |   6   |   7   |   8   |   9
 
 We want to use this mapping for encoding telephone numbers by words, so
 that it becomes easier to remember the numbers.
@@ -42,9 +42,12 @@ and follow further instruction
 Thechnical solution
 --------------------
 The key ideas:
+
 1) Do not use Strings since thay requires byte[] --> char[] transformation that is slow and not necessary
+
 2) precalculate inverse function G for given function Hash (see About section). Function G is that
 G(phone) = {Word}, such that for each w in {Word}: Hash(w) = phone
+
 3) Store this function as TreeMap index with correspondent comarator.
 
 This function is calculated once, based on dictionary. 
