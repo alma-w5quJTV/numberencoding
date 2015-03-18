@@ -43,11 +43,11 @@ Thechnical solution
 --------------------
 The key ideas:
 
-1) Do not use Strings since thay requires byte[] --> char[] transformation that is slow and not necessary
+1) Do not use `String`s since thay requires `byte[] --> char[]` transformation that is slow and not necessary for given task
 
-2) precalculate inverse function G for given function Hash (see About section). Function G is that
-G(phone) = {Word}, such that for each w in {Word}: Hash(w) = phone
+2) precalculate inverse function `G` for given function `Hash` (see About section). Function `G` is that
+`G(phone) = {Word}`, such that for each `w in {Word}: Hash(w) = phone`
 
-3) Store this function as TreeMap index with correspondent comarator.
+3) Store this function as `TreeMap` index with correspondent comparator.
 
 This function is calculated once, based on dictionary. 
